@@ -1,0 +1,110 @@
+/* projects list */
+.card-set {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card {
+    min-height: 404px;
+    display: inline-block;
+    
+    &:nth-child(n) {
+        margin-right: 30px;
+        margin-bottom: 30px;
+    }
+    
+    &:nth-child(3n) {
+        margin-right: 0;
+    }
+    
+    &:nth-last-child(-n+3) {
+        margin-bottom: 0;
+    }
+}
+
+.card__link {
+    width: 100%;
+}
+
+.card__project {
+    box-shadow: none;
+    
+    .card__link:hover &,
+    .card__link:focus & {
+        box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+        
+        transition: box-shadow 250ms $base-style-animation;
+    }
+}
+
+.card__thumb {
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    overflow: hidden;
+}
+
+.card__thumb-item {
+    position: absolute;
+    bottom: -100%;
+
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: $bg-hover-item;
+    
+    .card__link:hover &,
+    .card__link:focus & {
+        position: absolute;
+        bottom: 0%;
+        
+        transition: bottom 250ms $base-style-animation;
+    }
+}
+
+.card__hover-text {
+    width: 322px;
+    height: 168px;
+
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.56;
+    letter-spacing: 0.03em;
+
+    color: $white;
+}
+
+
+.card__item {
+    width: 100%;
+    padding: 20px 24px;
+    border: 1px solid #ECECEC;
+    border-top: none;
+}
+
+
+.card__title {
+    width: 320px;
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.06em;
+
+    .card__link:hover &,
+    .card__link:focus & {
+        color: $main-font-black;
+    }
+}
+
+.card__desc {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.88;
+    letter-spacing: 0.03em;
+    color: $main-font-color;
+    margin-top: 4px;
+}

@@ -1,0 +1,45 @@
+/* clients */
+/* icons */
+.clients__container {
+    display: flex;
+    flex-direction: column;
+}
+
+.clients__card-set {
+    display: flex;
+    flex-direction: row;
+    margin-top: 50px;
+}
+
+.clients__card {
+    display: block;
+    
+    &:not(:first-child) {
+        margin-left: 30px;
+    }
+}
+
+.clients__thumb {
+    width: 106px;
+    height: 60px;
+    fill: currentColor;
+}
+
+.clients__item {
+    width: 170px;
+    height: 92px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $icon-gray;
+
+    border: 1px solid $icon-gray;
+    border-radius: 4px;
+    
+    &:hover,
+    &:focus {
+        color: $accent-blue;
+        border: 1px solid $accent-blue;
+        transition: color 250ms $base-style-animation, border 250ms $base-style-animation;
+    }
+}
