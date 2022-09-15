@@ -20,37 +20,57 @@
     <!-- header -->
     <header class="header">
       <div class="container flex">
-        <nav class="nav">
-          <a href="" class="logo"><span class="logo--blue">Web</span>Studio</a>
-          <ul class="list nav__list">
-            <li class="nav__item">
-              <a href="./index.html" class="link nav__link nav__link--page-active">Студія</a>
-            </li>
-            <li class="nav__item">
-              <a href="./portfolio.html" class="link nav__link">Портфоліо</a>
-            </li>
-            <li class="nav__item"><a href="" class="link nav__link">Контакти</a></li>
-          </ul>
-        </nav>
+        <a href="" class="logo"><span class="logo--blue">Web</span>Studio</a>
+        <div class="mobile-menu"  [data-menu]>
+          <div>
+            <button type="button" class="button-menu-close" aria-expanded="false" [data-menu-button]>
+              <svg height="40" width="40">
+                <use href="./images/icons.svg#icon-closet-window"></use>
+              </svg>
+            </button>
+          </div>
+          <nav class="nav">
+            <ul class="list nav__list">
+              <li class="nav__item">
+                <a href="./index.html" class="link nav__link nav__link--page-active">Студія</a>
+              </li>
+              <li class="nav__item">
+                <a href="./portfolio.html" class="link nav__link">Портфоліо</a>
+              </li>
+              <li class="nav__item"><a href="" class="link nav__link">Контакти</a></li>
+            </ul>
+          </nav>
 
-        <ul class="list contacts">
-          <li class="contacts__item">
-            <a href="mailto:info@devstudio.com" class="link contacts__link contacts__icon--align">
-              <svg class="contacts__icon" width="16">
-                <use href="./images/icons.svg#icon-envelope"></use>
-              </svg>
-              info@devstudio.com
-            </a>
-          </li>
-          <li class="contacts__item">
-            <a href="tel:+380961111111" class="link contacts__link contacts__icon--align">
-              <svg class="contacts__icon">
-                <use href="./images/icons.svg#icon-smartphone"></use>
-              </svg>
-              +38 096 111 11 11
-            </a>
-          </li>
-        </ul>
+          <ul class="list contacts">
+            <li class="contacts__item">
+              <a href="mailto:info@devstudio.com" class="link contacts__link contacts__icon--align contacts__link--mail">
+                <svg class="contacts__icon" width="16">
+                  <use href="./images/icons.svg#icon-envelope"></use>
+                </svg>
+                info@devstudio.com
+              </a>
+            </li>
+            <li class="contacts__item">
+              <a href="tel:+380961111111" class="link contacts__link contacts__icon--align contacts__link--tel">
+                <svg class="contacts__icon">
+                  <use href="./images/icons.svg#icon-smartphone"></use>
+                </svg>
+                +38 096 111 11 11
+              </a>
+            </li>
+          </ul>
+          <ul class="list header__socials">
+            <li class="header__link-thumb"><a href="" class="link header__link-socials">Instagram</a></li>
+            <li class="header__link-thumb"><a href="" class="link header__link-socials">Twitter</a></li>
+            <li class="header__link-thumb"><a href="" class="link header__link-socials">Facebook</a></li>
+            <li class="header__link-thumb"><a href="" class="link header__link-socials">LinkedIn</a></li>
+          </ul>
+        </div>
+        <button type="button" class="button-menu" aria-expanded="false" [data-menu-button]>
+          <svg class="header__icon-menu">
+            <use href="./images/icons.svg#icon-header-menu"></use>
+          </svg>
+        </button>
       </div>
     </header>
 
@@ -158,7 +178,7 @@
           <h2 class="title team-info__title">Наша команда</h2>
           <ul class="list team-info__team-members">
             <li class="team-info__member">
-              <img src="./images/person1.jpg" alt="фото Ігора Дем'яненка" width="270" />
+              <img src="./images/person1.jpg" alt="фото Ігора Дем'яненка" width="100%" />
               <h3 class="title team-info__member-name">Ігор Дем'яненко</h3>
               <p class="team-info__member-post">Product Designer</p>
               <ul class="social-media">
@@ -193,7 +213,7 @@
               </ul>
             </li>
             <li class="team-info__member">
-              <img src="./images/person2.jpg" alt="фото Ольги Рєпіної" width="270" />
+              <img src="./images/person2.jpg" alt="фото Ольги Рєпіної" width="100%" />
               <h3 class="title team-info__member-name">Ольга Рєпіна</h3>
               <p class="team-info__member-post">Frontend Developer</p>
               <ul class="social-media">
@@ -228,7 +248,7 @@
               </ul>
             </li>
             <li class="team-info__member">
-              <img src="./images/person3.jpg" alt="фото Миколи Тарасова" width="270" />
+              <img src="./images/person3.jpg" alt="фото Миколи Тарасова" width="100%" />
               <h3 class="title team-info__member-name">Микола Тарасов</h3>
               <p class="team-info__member-post">Marketing</p>
               <ul class="social-media">
@@ -263,7 +283,7 @@
               </ul>
             </li>
             <li class="team-info__member">
-              <img src="./images/person4.jpg" alt="фото Михайла Єрмакова" width="270" />
+              <img src="./images/person4.jpg" alt="фото Михайла Єрмакова" width="100%" />
               <h3 class="title team-info__member-name">Михайло Єрмаков</h3>
               <p class="team-info__member-post">UI Designer</p>
               <ul class="social-media">

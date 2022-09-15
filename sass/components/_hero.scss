@@ -1,3 +1,4 @@
+@import url(../utils/_variables.scss);
 /* hero */
 .hero {
     max-width: 1600px;
@@ -17,6 +18,12 @@
     background-size: cover;
 
     background-color: $hero-bg-color;
+
+    @include max-width ($max-mobile) {
+        width: 480px;
+        padding-top: 118px;
+        padding-bottom: 118px;
+    }
 }
 
 .hero__container {
@@ -26,6 +33,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    // @include max-width ($max-mobile) {
+    //     width: 360px;
+    // }
 }
 
 
@@ -56,4 +67,12 @@
     text-transform: uppercase;
 
     color: $white;
+    
+    @include max-width ($max-mobile) {
+        width: 360px;
+        font-size: 26px;
+        line-height: 1.62;
+
+    }
+
 }

@@ -1,6 +1,9 @@
 /* чим ми займаємося */
 .info {
     padding-top: 0;
+    @include max-width ($max-mobile) {
+        display: none;
+    }
 }
 
 .info__container {

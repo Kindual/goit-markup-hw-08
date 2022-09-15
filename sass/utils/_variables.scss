@@ -19,7 +19,28 @@ $link-footer-color: rgba(255, 255, 255, 0.6);
 
 $white: #FFFFFF;
 $btn-shadow: rgba(0, 0, 0, 0.15);
-$icon-gray: #AFB1B8;
+$icon-gray: #AFB1B8;  
 
 /* animation */
 $base-style-animation: cubic-bezier(0.4, 0, 0.2, 1);
+
+// adaptive 
+$min-mobile: 480px;
+$max-mobile: 767px;
+
+$min-tablet: 768px;
+$max-tablet: 1199px;
+
+$min-desktop: 1200px;
+
+@mixin min-width ($width) {
+    @media screen and (min-width:$width) {
+        @content    
+    }
+}
+
+@mixin max-width ($width) {
+    @media screen and (max-width:$width) {
+        @content
+    }
+}

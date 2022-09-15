@@ -2,6 +2,11 @@
 .section {
     padding-top: 94px;
     padding-bottom: 94px;
+
+    @include max-width ($max-mobile) {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
 }
 
 .container {
@@ -10,6 +15,11 @@
     margin-right: auto;
     padding-left: 15px;
     padding-right: 15px;
+
+    
+    @include max-width ($max-mobile) {
+        width: 480px;
+    }
 }
 
 .flex {
@@ -78,4 +88,8 @@
     background-color: $accent-blue;
 
     cursor: pointer;
+
+    @include max-width ($max-mobile) {
+        padding: 10px 24px;
+    }
 }

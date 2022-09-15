@@ -14,10 +14,20 @@
 }
 
 .our-methods__item {
-    width: 270px;
+    width: 100%;
     
-    &:not(:first-child) {
-        margin-left: 30px;
+    @include max-width ($max-mobile) {
+        &:not(:first-child) {
+            margin-top: 30px;
+        }
+    }
+    
+    @include min-width ($min-desktop){
+        width: 270px;
+        
+        &:not(:first-child) {
+            margin-left: 30px;
+        }
     }
 }
 
@@ -27,6 +37,10 @@
     line-height: 1.14;
     text-transform: uppercase;
     text-align: left;
+
+    @include max-width ($max-mobile) {
+        text-align: center;
+    }
 }
 
 .our-methods__text {

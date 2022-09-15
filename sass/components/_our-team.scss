@@ -14,6 +14,12 @@
 .team-info__team-members {
     display: flex;
     margin-top: 50px;
+
+    @include max-width ($max-mobile) {
+        flex-direction: column;
+        margin-top: 30px;
+        gap: 30px;
+    }
 }
 
 .team-info__member {
@@ -22,8 +28,14 @@
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
     
-    &:not(:first-child) {
-        margin-left: 30px;
+    @include max-width ($max-mobile) {
+        width: 100%;
+    }
+
+    @include min-width ($min-desktop) {
+        &:not(:first-child) {
+            margin-left: 30px;
+        }
     }
 }
 
@@ -44,15 +56,15 @@
 }
 
 .social-media {
-    margin-top: 0;
-    margin-bottom: 0;
-    padding-left: 0;
     list-style-type: none;
     display: flex;
-    padding-left: 32px;
-    padding-right: 32px;
+    justify-content: center;
     margin-top: 16px;
     margin-bottom: 30px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-inline-start: 0;
+    gap: 10px;
 }
 
 .social-media__item {
@@ -63,8 +75,10 @@
     box-shadow: none;
     transition: fill 2500ms $base-style-animation;
     
-    &:not(:first-child) {
+    @include min-width ($min-tablet) {
+        &:not(:first-child) {
         margin-left: 10px;
+        }
     }
 }
 
