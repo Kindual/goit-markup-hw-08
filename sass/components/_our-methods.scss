@@ -11,6 +11,10 @@
     min-height: 98px;
     margin-left: auto;
     margin-right: auto;
+
+    @include min-max ($min-tablet, $max-tablet) {
+        gap: 30px;
+    }
 }
 
 .our-methods__item {
@@ -20,6 +24,10 @@
         &:not(:first-child) {
             margin-top: 30px;
         }
+    }
+
+    @include min-max ($min-tablet, $max-tablet) {
+        width: calc((100% - 30px)/2);
     }
     
     @include min-width ($min-desktop){

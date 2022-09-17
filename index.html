@@ -21,13 +21,14 @@
     <header class="header">
       <div class="container flex">
         <a href="" class="logo"><span class="logo--blue">Web</span>Studio</a>
-        <div class="mobile-menu"  [data-menu]>
+        <button type="button" class="button-menu" aria-expanded="false" data-menu-button>
+          <svg height="40" width="40">
+            <use class="button__img-close" href="./images/icons.svg#icon-closet-window"></use>
+            <use class="button__img-open" href="./images/icons.svg#icon-header-menu"></use>
+          </svg>
+        </button>
+        <div class="mobile-menu" data-menu>
           <div>
-            <button type="button" class="button-menu-close" aria-expanded="false" [data-menu-button]>
-              <svg height="40" width="40">
-                <use href="./images/icons.svg#icon-closet-window"></use>
-              </svg>
-            </button>
           </div>
           <nav class="nav">
             <ul class="list nav__list">
@@ -66,11 +67,6 @@
             <li class="header__link-thumb"><a href="" class="link header__link-socials">LinkedIn</a></li>
           </ul>
         </div>
-        <button type="button" class="button-menu" aria-expanded="false" [data-menu-button]>
-          <svg class="header__icon-menu">
-            <use href="./images/icons.svg#icon-header-menu"></use>
-          </svg>
-        </button>
       </div>
     </header>
 
@@ -505,6 +501,7 @@
       </div>
     </div>
 
-    <script src="./js/modal.js"></script>
+    <script defer src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
   </body>
 </html>

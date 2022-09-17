@@ -1,7 +1,7 @@
 /* чим ми займаємося */
 .info {
     padding-top: 0;
-    @include max-width ($max-mobile) {
+    @include max-width ($max-tablet) {
         display: none;
     }
 }

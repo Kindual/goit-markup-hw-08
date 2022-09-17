@@ -21,33 +21,53 @@
     <!-- header -->
     <header class="header">
       <div class="container flex">
-        <nav class="nav">
-          <a href="" class="logo"><span class="logo--blue">Web</span>Studio</a>
-          <ul class="nav__list list">
-            <li class="nav__item"><a href="./index.html" class="link nav__link ">Студія</a></li>
-            <li class="nav__item"><a href="./portfolio.html" class="link nav__link nav__link--page-active">Портфоліо</a></li>
-            <li class="nav__item"><a href="" class="link nav__link">Контакти</a></li>
-          </ul>
-        </nav>
+        <a href="" class="logo"><span class="logo--blue">Web</span>Studio</a>
+        <button type="button" class="button-menu" aria-expanded="false" data-menu-button>
+          <svg height="40" width="40">
+            <use class="button__img-close" href="./images/icons.svg#icon-closet-window"></use>
+            <use class="button__img-open" href="./images/icons.svg#icon-header-menu"></use>
+          </svg>
+        </button>
+        <div class="mobile-menu" data-menu>
+          <div>
+          </div>
+          <nav class="nav">
+            <ul class="list nav__list">
+              <li class="nav__item">
+                <a href="./index.html" class="link nav__link">Студія</a>
+              </li>
+              <li class="nav__item">
+                <a href="./portfolio.html" class="link nav__link nav__link--page-active">Портфоліо</a>
+              </li>
+              <li class="nav__item"><a href="" class="link nav__link">Контакти</a></li>
+            </ul>
+          </nav>
 
-        <ul class="list contacts">
-          <li class="contacts__item">
-            <a href="mailto:info@devstudio.com" class="link contacts__link contacts__icon--align">
-              <svg class="contacts__icon">
-                <use href="./images/icons.svg#icon-envelope"></use>
-              </svg>
-              info@devstudio.com
-            </a>
-          </li>
-          <li class="contacts__item">
-            <a href="tel:+380961111111" class="link contacts__link contacts__icon--align">
-              <svg class="contacts__icon">
-                <use href="./images/icons.svg#icon-smartphone"></use>
-              </svg>
-              +38 096 111 11 11
-            </a>
-          </li>
-        </ul>
+          <ul class="list contacts">
+            <li class="contacts__item">
+              <a href="mailto:info@devstudio.com" class="link contacts__link contacts__icon--align contacts__link--mail">
+                <svg class="contacts__icon" width="16">
+                  <use href="./images/icons.svg#icon-envelope"></use>
+                </svg>
+                info@devstudio.com
+              </a>
+            </li>
+            <li class="contacts__item">
+              <a href="tel:+380961111111" class="link contacts__link contacts__icon--align contacts__link--tel">
+                <svg class="contacts__icon">
+                  <use href="./images/icons.svg#icon-smartphone"></use>
+                </svg>
+                +38 096 111 11 11
+              </a>
+            </li>
+          </ul>
+          <ul class="list header__socials">
+            <li class="header__link-thumb"><a href="" class="link header__link-socials">Instagram</a></li>
+            <li class="header__link-thumb"><a href="" class="link header__link-socials">Twitter</a></li>
+            <li class="header__link-thumb"><a href="" class="link header__link-socials">Facebook</a></li>
+            <li class="header__link-thumb"><a href="" class="link header__link-socials">LinkedIn</a></li>
+          </ul>
+        </div>
       </div>
     </header>
 
@@ -186,6 +206,7 @@
                       alt="дві естетичні коробочки - біла і світло коричнева"
                       width="370"
                       height="294"
+                      
                     />
                     <div class="card__thumb-item">
                       <p class="card__hover-text">
@@ -373,6 +394,6 @@
         </div>
       </div>
     </footer>
-    <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
   </body>
 </html>

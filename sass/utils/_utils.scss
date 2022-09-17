@@ -3,23 +3,27 @@
     padding-top: 94px;
     padding-bottom: 94px;
 
-    @include max-width ($max-mobile) {
+    @include max-width ($max-tablet) {
         padding-top: 60px;
         padding-bottom: 60px;
     }
 }
 
 .container {
-    width: 1200px;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
     padding-left: 15px;
     padding-right: 15px;
 
-    
-    @include max-width ($max-mobile) {
-        width: 480px;
+    @include min-max ($min-tablet, $max-tablet) {
+        width: 768px;
     }
+    
+    @include min-width ($min-desktop) {
+        width: 1200px;
+    }
+
 }
 
 .flex {

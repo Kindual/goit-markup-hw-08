@@ -14,16 +14,20 @@
 .team-info__team-members {
     display: flex;
     margin-top: 50px;
+    flex-wrap: wrap;
+    gap: 30px;
 
     @include max-width ($max-mobile) {
         flex-direction: column;
         margin-top: 30px;
-        gap: 30px;
+    }
+
+    @include min-max ($min-tablet, $max-tablet) {
+        width: 100%;
     }
 }
 
 .team-info__member {
-    width: 270px;
     background-color: $white;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
@@ -31,11 +35,13 @@
     @include max-width ($max-mobile) {
         width: 100%;
     }
-
+    
+    @include min-max ($min-tablet, $max-tablet) {
+        width: calc((100% - 30px) / 2);
+    }
+    
     @include min-width ($min-desktop) {
-        &:not(:first-child) {
-            margin-left: 30px;
-        }
+        width: calc((100% - (30px * 3)) / 4);
     }
 }
 
@@ -74,12 +80,7 @@
     fill: $accent-black;
     box-shadow: none;
     transition: fill 2500ms $base-style-animation;
-    
-    @include min-width ($min-tablet) {
-        &:not(:first-child) {
-        margin-left: 10px;
-        }
-    }
+
 }
 
 

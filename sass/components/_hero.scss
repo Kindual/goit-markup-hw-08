@@ -20,9 +20,13 @@
     background-color: $hero-bg-color;
 
     @include max-width ($max-mobile) {
-        width: 480px;
+        width: 100%;
         padding-top: 118px;
         padding-bottom: 118px;
+    }
+
+    @include min-max ($min-tablet, $max-tablet) {
+        
     }
 }
 
@@ -54,25 +58,41 @@
         background-color: $btn-hover-color;
         transition: background-color 250ms $base-style-animation, color 250ms $base-style-animation;
     }
+    
+    @include min-max ($min-tablet, $max-tablet) {
+        padding: 10px 24px;
+    }
 }
 
 
 .hero__title {
     display: inline-block;
-    width: 696px;
     font-weight: 900;
     font-size: 44px;
     line-height: 1.36;
     letter-spacing: 0.06em;
     text-transform: uppercase;
-
+    text-align: center;
+    
     color: $white;
     
     @include max-width ($max-mobile) {
-        width: 360px;
+        max-width: 360px;
         font-size: 26px;
         line-height: 1.62;
-
+        
     }
 
+    @include min-max ($min-tablet, $max-tablet) {
+        max-width: 360px;
+        font-size: 26px;
+        line-height: 1.62;
+        letter-spacing: 0.06em;
+    }
+    
+    @include min-width ($min-desktop) {
+        width: 696px;
+        
+    }
+    
 }

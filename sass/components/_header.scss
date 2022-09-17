@@ -4,6 +4,11 @@
     padding-bottom: 0;
     border-bottom: 1px solid #ECECEC;
     
+    & .flex {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
 }
 
 .nav {
@@ -42,16 +47,15 @@
     position: relative;
     
     @include min-width ($min-tablet) {
-        &:not(:first-child) {
-            margin-left: 50px;
-        }
+        // gap: 50px;
+        display: inline-block;
     }
 }
 
 .nav__link--page-active {
-    color: $accent-blue;
-    
     @include min-width ($min-tablet) {
+        color: $accent-blue;
+        
         &::after {
             content: '';
             position: absolute;
@@ -77,7 +81,9 @@
         text-align: center;
         letter-spacing: 0.02em;
     }
+}
 
+.nav__link {
     @include min-width ($min-tablet) {
         padding-top: 32px;
         padding-bottom: 32px;
@@ -91,13 +97,28 @@
         margin-bottom: 64px;
     }
 
-    @include min-width ($min-tablet) {
+    
+    @include min-max ($min-tablet, $max-tablet) {
         margin-left: auto;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    @include min-width ($min-desktop) {
+        margin-left: auto;
+        gap: 30px;
     }
 }
 
 .contacts__link {
     color: $main-font-color;
+    
+    @include min-max ($min-tablet, $max-tablet) {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
 }
 
 .contacts__icon {
@@ -160,7 +181,9 @@
     @include max-width ($max-mobile) {
         position: absolute;
         right: 0;
+        top: 0;
         padding: 48px 40px;
+        z-index: 9;
         
         flex-direction: column;
         justify-content: space-between;
@@ -212,6 +235,7 @@
         font-size: 34px;
         line-height: 1.18;
         letter-spacing: 0.02em;
+        color: $accent-blue;
     }
 }
 
@@ -223,10 +247,8 @@
     }
 }
 
-.button-menu-close {
-    position: absolute;
-    right: 15px;
-    top: 10px;
+.button-menu {
+    z-index: 10;
 
     background-color: $white;
     border: none;
@@ -234,6 +256,30 @@
     @include min-width ($min-tablet) {
         display: none;
     }
+
+    &:hover {
+        cursor: pointer;
+    } 
 }
+
+.button-menu[aria-expanded="false"] {
+    & .button__img-close {
+        opacity: 0;
+    }
+    & .button__img-open {
+        opacity: 1;
+    }
+}
+
+.button-menu[aria-expanded="true"] {
+    & .button__img-close {
+        opacity: 1;
+    }
+
+    & .button__img-open {
+        opacity: 0;
+    }
+}
+
 
 
