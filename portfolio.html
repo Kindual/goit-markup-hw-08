@@ -13,7 +13,6 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
     />
-    <link rel="stylesheet" href="./css/common.css" />
     <link rel="stylesheet" href="./dist/css/main.min.css" />
   </head>
 
@@ -29,15 +28,16 @@
           </svg>
         </button>
         <div class="mobile-menu" data-menu>
-          <div>
-          </div>
+          <div></div>
           <nav class="nav">
             <ul class="list nav__list">
               <li class="nav__item">
                 <a href="./index.html" class="link nav__link">Студія</a>
               </li>
               <li class="nav__item">
-                <a href="./portfolio.html" class="link nav__link nav__link--page-active">Портфоліо</a>
+                <a href="./portfolio.html" class="link nav__link nav__link--page-active"
+                  >Портфоліо</a
+                >
               </li>
               <li class="nav__item"><a href="" class="link nav__link">Контакти</a></li>
             </ul>
@@ -45,7 +45,10 @@
 
           <ul class="list contacts">
             <li class="contacts__item">
-              <a href="mailto:info@devstudio.com" class="link contacts__link contacts__icon--align contacts__link--mail">
+              <a
+                href="mailto:info@devstudio.com"
+                class="link contacts__link contacts__icon--align contacts__link--mail"
+              >
                 <svg class="contacts__icon" width="16">
                   <use href="./images/icons.svg#icon-envelope"></use>
                 </svg>
@@ -53,7 +56,10 @@
               </a>
             </li>
             <li class="contacts__item">
-              <a href="tel:+380961111111" class="link contacts__link contacts__icon--align contacts__link--tel">
+              <a
+                href="tel:+380961111111"
+                class="link contacts__link contacts__icon--align contacts__link--tel"
+              >
                 <svg class="contacts__icon">
                   <use href="./images/icons.svg#icon-smartphone"></use>
                 </svg>
@@ -62,10 +68,18 @@
             </li>
           </ul>
           <ul class="list header__socials">
-            <li class="header__link-thumb"><a href="" class="link header__link-socials">Instagram</a></li>
-            <li class="header__link-thumb"><a href="" class="link header__link-socials">Twitter</a></li>
-            <li class="header__link-thumb"><a href="" class="link header__link-socials">Facebook</a></li>
-            <li class="header__link-thumb"><a href="" class="link header__link-socials">LinkedIn</a></li>
+            <li class="header__link-thumb">
+              <a href="" class="link header__link-socials">Instagram</a>
+            </li>
+            <li class="header__link-thumb">
+              <a href="" class="link header__link-socials">Twitter</a>
+            </li>
+            <li class="header__link-thumb">
+              <a href="" class="link header__link-socials">Facebook</a>
+            </li>
+            <li class="header__link-thumb">
+              <a href="" class="link header__link-socials">LinkedIn</a>
+            </li>
           </ul>
         </div>
       </div>
@@ -78,7 +92,9 @@
           <h1 class="visually-hidden">Проєкти</h1>
           <ul class="list filter__list">
             <li class="filter__item">
-              <button type="button" class="button filter__button filter__button--active">Усі</button>
+              <button type="button" class="button filter__button filter__button--active">
+                Усі
+              </button>
             </li>
             <li class="filter__item">
               <button type="button" class="button filter__button">Веб-сайти</button>
@@ -101,12 +117,60 @@
               <a href="" class="link card__link">
                 <div class="card__project">
                   <div class="card__thumb">
-                    <img
-                      src="./images/technocrat.jpg"
-                      alt="ноутбук на екрані якого відкриті соцмережи"
-                      width="370"
-                      height="294"
-                    />
+                    <picture>
+                      <source
+                        srcset="
+                          ./images/projects/project-1/project-1-370.webp    1x,
+                          ./images/projects/project-1/project-1-370@2x.webp 2x
+                        "
+                        type="image/webp"
+                        media="(min-width: 1200px)"
+                      />
+                      <source
+                        srcset="
+                          ./images/projects/project-1/project-1-354.webp    1x,
+                          ./images/projects/project-1/project-1-354@2x.webp 2x
+                        "
+                        type="image/webp"
+                        media="(min-width: 768px)"
+                      />
+                      <source
+                        srcset="
+                          ./images/projects/project-1/project-1-450.webp    1x,
+                          ./images/projects/project-1/project-1-450@2x.webp 2x
+                        "
+                        type="image/webp"
+                        media="(max-width: 767px)"
+                      />
+                      <source
+                        srcset="
+                          ./images/projects/project-1/project-1-370.jpg    1x,
+                          ./images/projects/project-1/project-1-370@2x.jpg 2x
+                        "
+                        type="image/jpeg"
+                        media="(min-width: 1200px)"
+                      />
+                      <source
+                        srcset="
+                          ./images/projects/project-1/project-1-354.jpg    1x,
+                          ./images/projects/project-1/project-1-354@2x.jpg 2x
+                        "
+                        type="image/jpeg"
+                        media="(min-width: 768px)"
+                      />
+                      <source
+                        srcset="
+                          ./images/projects/project-1/project-1-450.jpg    1x,
+                          ./images/projects/project-1/project-1-450@2x.jpg 2x
+                        "
+                        type="image/jpeg"
+                        media="(max-width: 767px)"
+                      />
+                      <img
+                        src="./images/projects/project-1/project-1-370.jpg"
+                        alt="ноутбук на екрані якого відкриті соцмережи"
+                      />
+                    </picture>
                     <div class="card__thumb-item">
                       <p class="card__hover-text">
                         Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та
@@ -126,12 +190,60 @@
               <a href="" class="link card__link">
                 <div class="card__project">
                   <div class="card__thumb">
-                    <img
-                      src="./images/poster.jpg"
-                      alt="два гравця різних команд - один кидає м'яч інший намагається запобігти цьому"
-                      width="370"
-                      height="294"
-                    />
+                    <picture>
+                      <source
+                        srcset="
+                          ./images/projects/project-2/project-2-370.webp    1x,
+                          ./images/projects/project-2/project-2-370@2x.webp 2x
+                        "
+                        type="image/webp"
+                        media="(min-width: 1200px)"
+                      />
+                      <source
+                        srcset="
+                          ./images/projects/project-2/project-2-354.webp    1x,
+                          ./images/projects/project-2/project-2-354@2x.webp 2x
+                        "
+                        type="image/webp"
+                        media="(min-width: 768px)"
+                      />
+                      <source
+                        srcset="
+                          ./images/projects/project-2/project-2-450.webp    1x,
+                          ./images/projects/project-2/project-2-450@2x.webp 2x
+                        "
+                        type="image/webp"
+                        media="(max-width: 767px)"
+                      />
+                      <source
+                        srcset="
+                          ./images/projects/project-2/project-2-370.jpg    1x,
+                          ./images/projects/project-2/project-2-370@2x.jpg 2x
+                        "
+                        type="image/jpeg"
+                        media="(min-width: 1200px)"
+                      />
+                      <source
+                        srcset="
+                          ./images/projects/project-2/project-2-354.jpg    1x,
+                          ./images/projects/project-2/project-2-354@2x.jpg 2x
+                        "
+                        type="image/jpeg"
+                        media="(min-width: 768px)"
+                      />
+                      <source
+                        srcset="
+                          ./images/projects/project-2/project-2-450.jpg    1x,
+                          ./images/projects/project-2/project-2-450@2x.jpg 2x
+                        "
+                        type="image/jpeg"
+                        media="(max-width: 767px)"
+                      />
+                      <img
+                        src="./images/projects/project-2/project-2-370.jpg"
+                        alt="два гравця різних команд - один кидає м'яч інший намагається запобігти цьому"
+                      />
+                    </picture>
                     <div class="card__thumb-item">
                       <p class="card__hover-text">
                         Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та
@@ -151,12 +263,60 @@
               <a href="" class="link card__link">
                 <div class="card__project">
                   <div class="card__thumb">
-                    <img
-                      src="./images/restourant.jpg"
-                      alt="написи на фоні напівпрозорої риби невідомого мені похождення"
-                      width="370"
-                      height="294"
-                    />
+                    <picture>
+                      <source
+                        srcset="
+                          ./images/projects/project-3/project-3-370.webp    1x,
+                          ./images/projects/project-3/project-3-370@2x.webp 2x
+                        "
+                        type="image/webp"
+                        media="(min-width: 1200px)"
+                      />
+                      <source
+                        srcset="
+                          ./images/projects/project-3/project-3-354.webp    1x,
+                          ./images/projects/project-3/project-3-354@2x.webp 2x
+                        "
+                        type="image/webp"
+                        media="(min-width: 768px)"
+                      />
+                      <source
+                        srcset="
+                          ./images/projects/project-3/project-3-450.webp    1x,
+                          ./images/projects/project-3/project-3-450@2x.webp 2x
+                        "
+                        type="image/webp"
+                        media="(max-width: 767px)"
+                      />
+                      <source
+                        srcset="
+                          ./images/projects/project-3/project-3-370.jpg    1x,
+                          ./images/projects/project-3/project-3-370@2x.jpg 2x
+                        "
+                        type="image/jpeg"
+                        media="(min-width: 1200px)"
+                      />
+                      <source
+                        srcset="
+                          ./images/projects/project-3/project-3-354.jpg    1x,
+                          ./images/projects/project-3/project-3-354@2x.jpg 2x
+                        "
+                        type="image/jpeg"
+                        media="(min-width: 768px)"
+                      />
+                      <source
+                        srcset="
+                          ./images/projects/project-3/project-3-450.jpg    1x,
+                          ./images/projects/project-3/project-3-450@2x.jpg 2x
+                        "
+                        type="image/jpeg"
+                        media="(max-width: 767px)"
+                      />
+                      <img
+                        src="./images/projects/project-3/project-3-370.jpg"
+                        alt="написи на фоні напівпрозорої риби невідомого мені похождення"
+                      />
+                    </picture>
                     <div class="card__thumb-item">
                       <p class="card__hover-text">
                         Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та
@@ -176,12 +336,60 @@
               <a href="" class="link card__link">
                 <div class="card__project">
                   <div class="card__thumb">
-                    <img
-                      src="./images/project-prime.jpg"
-                      alt="слухавки накладні бездротові на білому фоні"
-                      width="370"
-                      height="294"
-                    />
+                    <picture>
+                      <source
+                        srcset="
+                          ./images/projects/project-4/project-4-370.webp    1x,
+                          ./images/projects/project-4/project-4-370@2x.webp 2x
+                        "
+                        type="image/webp"
+                        media="(min-width: 1200px)"
+                      />
+                      <source
+                        srcset="
+                          ./images/projects/project-4/project-4-354.webp    1x,
+                          ./images/projects/project-4/project-4-354@2x.webp 2x
+                        "
+                        type="image/webp"
+                        media="(min-width: 768px)"
+                      />
+                      <source
+                        srcset="
+                          ./images/projects/project-4/project-4-450.webp    1x,
+                          ./images/projects/project-4/project-4-450@2x.webp 2x
+                        "
+                        type="image/webp"
+                        media="(max-width: 767px)"
+                      />
+                      <source
+                        srcset="
+                          ./images/projects/project-4/project-4-370.jpg    1x,
+                          ./images/projects/project-4/project-4-370@2x.jpg 2x
+                        "
+                        type="image/jpeg"
+                        media="(min-width: 1200px)"
+                      />
+                      <source
+                        srcset="
+                          ./images/projects/project-4/project-4-354.jpg    1x,
+                          ./images/projects/project-4/project-4-354@2x.jpg 2x
+                        "
+                        type="image/jpeg"
+                        media="(min-width: 768px)"
+                      />
+                      <source
+                        srcset="
+                          ./images/projects/project-4/project-4-450.jpg    1x,
+                          ./images/projects/project-4/project-4-450@2x.jpg 2x
+                        "
+                        type="image/jpeg"
+                        media="(max-width: 767px)"
+                      />
+                      <img
+                        src="./images/projects/project-4/project-4-370.jpg"
+                        alt="слухавки накладні бездротові на білому фоні"
+                      />
+                    </picture>
                     <div class="card__thumb-item">
                       <p class="card__hover-text">
                         Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та
@@ -201,13 +409,60 @@
               <a href="" class="link card__link">
                 <div class="card__project">
                   <div class="card__thumb">
-                    <img
-                      src="./images/project-boxes.jpg"
-                      alt="дві естетичні коробочки - біла і світло коричнева"
-                      width="370"
-                      height="294"
-                      
-                    />
+                    <picture>
+                      <source
+                        srcset="
+                          ./images/projects/project-5/project-5-370.webp    1x,
+                          ./images/projects/project-5/project-5-370@2x.webp 2x
+                        "
+                        type="image/webp"
+                        media="(min-width: 1200px)"
+                      />
+                      <source
+                        srcset="
+                          ./images/projects/project-5/project-5-354.webp    1x,
+                          ./images/projects/project-5/project-5-354@2x.webp 2x
+                        "
+                        type="image/webp"
+                        media="(min-width: 768px)"
+                      />
+                      <source
+                        srcset="
+                          ./images/projects/project-5/project-5-450.webp    1x,
+                          ./images/projects/project-5/project-5-450@2x.webp 2x
+                        "
+                        type="image/webp"
+                        media="(max-width: 767px)"
+                      />
+                      <source
+                        srcset="
+                          ./images/projects/project-5/project-5-370.jpg    1x,
+                          ./images/projects/project-5/project-5-370@2x.jpg 2x
+                        "
+                        type="image/jpeg"
+                        media="(min-width: 1200px)"
+                      />
+                      <source
+                        srcset="
+                          ./images/projects/project-5/project-5-354.jpg    1x,
+                          ./images/projects/project-5/project-5-354@2x.jpg 2x
+                        "
+                        type="image/jpeg"
+                        media="(min-width: 768px)"
+                      />
+                      <source
+                        srcset="
+                          ./images/projects/project-5/project-5-450.jpg    1x,
+                          ./images/projects/project-5/project-5-450@2x.jpg 2x
+                        "
+                        type="image/jpeg"
+                        media="(max-width: 767px)"
+                      />
+                      <img
+                        src="./images/projects/project-5/project-5-370.jpg"
+                        alt="дві естетичні коробочки - біла і світло коричнева"
+                      />
+                    </picture>
                     <div class="card__thumb-item">
                       <p class="card__hover-text">
                         Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та
@@ -227,12 +482,60 @@
               <a href="" class="link card__link">
                 <div class="card__project">
                   <div class="card__thumb">
-                    <img
-                      src="./images/inspiration.jpg"
-                      alt="монітор на якому зображено щось незрузуміле та гасло - натхнення не знає меж"
-                      width="370"
-                      height="294"
-                    />
+                    <picture>
+                      <source
+                        srcset="
+                          ./images/projects/project-6/project-6-370.webp    1x,
+                          ./images/projects/project-6/project-6-370@2x.webp 2x
+                        "
+                        type="image/webp"
+                        media="(min-width: 1200px)"
+                      />
+                      <source
+                        srcset="
+                          ./images/projects/project-6/project-6-354.webp    1x,
+                          ./images/projects/project-6/project-6-354@2x.webp 2x
+                        "
+                        type="image/webp"
+                        media="(min-width: 768px)"
+                      />
+                      <source
+                        srcset="
+                          ./images/projects/project-6/project-6-450.webp    1x,
+                          ./images/projects/project-6/project-6-450@2x.webp 2x
+                        "
+                        type="image/webp"
+                        media="(max-width: 767px)"
+                      />
+                      <source
+                        srcset="
+                          ./images/projects/project-6/project-6-370.jpg    1x,
+                          ./images/projects/project-6/project-6-370@2x.jpg 2x
+                        "
+                        type="image/jpeg"
+                        media="(min-width: 1200px)"
+                      />
+                      <source
+                        srcset="
+                          ./images/projects/project-6/project-6-354.jpg    1x,
+                          ./images/projects/project-6/project-6-354@2x.jpg 2x
+                        "
+                        type="image/jpeg"
+                        media="(min-width: 768px)"
+                      />
+                      <source
+                        srcset="
+                          ./images/projects/project-6/project-6-450.jpg    1x,
+                          ./images/projects/project-6/project-6-450@2x.jpg 2x
+                        "
+                        type="image/jpeg"
+                        media="(max-width: 767px)"
+                      />
+                      <img
+                        src="./images/projects/project-6/project-6-370.jpg"
+                        alt="монітор на якому зображено щось незрузуміле та гасло - натхнення не знає меж"
+                      />
+                    </picture>
                     <div class="card__thumb-item">
                       <p class="card__hover-text">
                         Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та
@@ -252,12 +555,60 @@
               <a href="" class="link card__link">
                 <div class="card__project">
                   <div class="card__thumb">
-                    <img
-                      src="./images/limited-edition.jpg"
-                      alt="розгорнутий журнал, швидше за все - жіночий"
-                      width="370"
-                      height="294"
-                    />
+                    <picture>
+                      <source
+                        srcset="
+                          ./images/projects/project-7/project-7-370.webp    1x,
+                          ./images/projects/project-7/project-7-370@2x.webp 2x
+                        "
+                        type="image/webp"
+                        media="(min-width: 1200px)"
+                      />
+                      <source
+                        srcset="
+                          ./images/projects/project-7/project-7-354.webp    1x,
+                          ./images/projects/project-7/project-7-354@2x.webp 2x
+                        "
+                        type="image/webp"
+                        media="(min-width: 768px)"
+                      />
+                      <source
+                        srcset="
+                          ./images/projects/project-7/project-7-450.webp    1x,
+                          ./images/projects/project-7/project-7-450@2x.webp 2x
+                        "
+                        type="image/webp"
+                        media="(max-width: 767px)"
+                      />
+                      <source
+                        srcset="
+                          ./images/projects/project-7/project-7-370.jpg    1x,
+                          ./images/projects/project-7/project-7-370@2x.jpg 2x
+                        "
+                        type="image/jpeg"
+                        media="(min-width: 1200px)"
+                      />
+                      <source
+                        srcset="
+                          ./images/projects/project-7/project-7-354.jpg    1x,
+                          ./images/projects/project-7/project-7-354@2x.jpg 2x
+                        "
+                        type="image/jpeg"
+                        media="(min-width: 768px)"
+                      />
+                      <source
+                        srcset="
+                          ./images/projects/project-7/project-7-450.jpg    1x,
+                          ./images/projects/project-7/project-7-450@2x.jpg 2x
+                        "
+                        type="image/jpeg"
+                        media="(max-width: 767px)"
+                      />
+                      <img
+                        src="./images/projects/project-7/project-7-370.jpg"
+                        alt="розгорнутий журнал, швидше за все - жіночий"
+                      />
+                    </picture>
                     <div class="card__thumb-item">
                       <p class="card__hover-text">
                         Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та
@@ -277,12 +628,60 @@
               <a href="" class="link card__link">
                 <div class="card__project">
                   <div class="card__thumb">
-                    <img
-                      src="./images/project-lab.jpg"
-                      alt="бірка крупним планом з написом і логотипом компанії"
-                      width="370"
-                      height="294"
-                    />
+                    <picture>
+                      <source
+                        srcset="
+                          ./images/projects/project-8/project-8-370.webp    1x,
+                          ./images/projects/project-8/project-8-370@2x.webp 2x
+                        "
+                        type="image/webp"
+                        media="(min-width: 1200px)"
+                      />
+                      <source
+                        srcset="
+                          ./images/projects/project-8/project-8-354.webp    1x,
+                          ./images/projects/project-8/project-8-354@2x.webp 2x
+                        "
+                        type="image/webp"
+                        media="(min-width: 768px)"
+                      />
+                      <source
+                        srcset="
+                          ./images/projects/project-8/project-8-450.webp    1x,
+                          ./images/projects/project-8/project-8-450@2x.webp 2x
+                        "
+                        type="image/webp"
+                        media="(max-width: 767px)"
+                      />
+                      <source
+                        srcset="
+                          ./images/projects/project-8/project-8-370.jpg    1x,
+                          ./images/projects/project-8/project-8-370@2x.jpg 2x
+                        "
+                        type="image/jpeg"
+                        media="(min-width: 1200px)"
+                      />
+                      <source
+                        srcset="
+                          ./images/projects/project-8/project-8-354.jpg    1x,
+                          ./images/projects/project-8/project-8-354@2x.jpg 2x
+                        "
+                        type="image/jpeg"
+                        media="(min-width: 768px)"
+                      />
+                      <source
+                        srcset="
+                          ./images/projects/project-8/project-8-450.jpg    1x,
+                          ./images/projects/project-8/project-8-450@2x.jpg 2x
+                        "
+                        type="image/jpeg"
+                        media="(max-width: 767px)"
+                      />
+                      <img
+                        src="./images/projects/project-8/project-8-370.jpg"
+                        alt="бірка крупним планом з написом і логотипом компанії"
+                      />
+                    </picture>
                     <div class="card__thumb-item">
                       <p class="card__hover-text">
                         Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та
@@ -302,12 +701,60 @@
               <a href="" class="link card__link">
                 <div class="card__project">
                   <div class="card__thumb">
-                    <img
-                      src="./images/growing-business.jpg"
-                      alt="хлопак обома руками друкує щось на ноутбуці, коли на ньому відкрита головна сторінка сайту"
-                      width="370"
-                      height="294"
-                    />
+                    <picture>
+                      <source
+                        srcset="
+                          ./images/projects/project-9/project-9-370.webp    1x,
+                          ./images/projects/project-9/project-9-370@2x.webp 2x
+                        "
+                        type="image/webp"
+                        media="(min-width: 1200px)"
+                      />
+                      <source
+                        srcset="
+                          ./images/projects/project-9/project-9-354.webp    1x,
+                          ./images/projects/project-9/project-9-354@2x.webp 2x
+                        "
+                        type="image/webp"
+                        media="(min-width: 768px)"
+                      />
+                      <source
+                        srcset="
+                          ./images/projects/project-9/project-9-450.webp    1x,
+                          ./images/projects/project-9/project-9-450@2x.webp 2x
+                        "
+                        type="image/webp"
+                        media="(max-width: 767px)"
+                      />
+                      <source
+                        srcset="
+                          ./images/projects/project-9/project-9-370.jpg    1x,
+                          ./images/projects/project-9/project-9-370@2x.jpg 2x
+                        "
+                        type="image/jpeg"
+                        media="(min-width: 1200px)"
+                      />
+                      <source
+                        srcset="
+                          ./images/projects/project-9/project-9-354.jpg    1x,
+                          ./images/projects/project-9/project-9-354@2x.jpg 2x
+                        "
+                        type="image/jpeg"
+                        media="(min-width: 768px)"
+                      />
+                      <source
+                        srcset="
+                          ./images/projects/project-9/project-9-450.jpg    1x,
+                          ./images/projects/project-9/project-9-450@2x.jpg 2x
+                        "
+                        type="image/jpeg"
+                        media="(max-width: 767px)"
+                      />
+                      <img
+                        src="./images/projects/project-9/project-9-370.jpg"
+                        alt="хлопак обома руками друкує щось на ноутбуці, коли на ньому відкрита головна сторінка сайту"
+                      />
+                    </picture>
                     <div class="card__thumb-item">
                       <p class="card__hover-text">
                         Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та

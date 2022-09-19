@@ -185,7 +185,13 @@ img {
     gap: 32px;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .nav__list,
+.contacts {
+    margin-left: 86px;
+  }
+}
+@media screen and (min-width: 1200px) {
   .nav__list,
 .contacts {
     align-items: center;
@@ -255,6 +261,7 @@ img {
     flex-direction: column-reverse;
     margin-top: auto;
     margin-bottom: 64px;
+    padding-top: 50px;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
@@ -356,6 +363,7 @@ img {
     visibility: visible;
     opacity: 1;
     pointer-events: all;
+    overflow: scroll;
   }
 }
 
@@ -435,7 +443,6 @@ img {
   margin-right: auto;
   padding-top: 200px;
   padding-bottom: 200px;
-  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../images/bgi-hero.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -446,8 +453,35 @@ img {
     width: 100%;
     padding-top: 118px;
     padding-bottom: 118px;
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../images/bgi-hero/bgi-hero-480.jpg);
   }
 }
+@media screen and (max-width: 767px) and (min-device-pixel-ratio: 2), screen and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), screen and (max-width: 767px) and (min-resolution: 192dpi), screen and (max-width: 767px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../images/bgi-hero/bgi-hero-480@2x.jpg);
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .hero {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../images/bgi-hero/bgi-hero-768.jpg);
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (max-width: 1199px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (max-width: 1199px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (max-width: 1199px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../images/bgi-hero/bgi-hero-768@2x.jpg);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .hero {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../images/bgi-hero/bgi-hero-1600.jpg);
+  }
+}
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../images/bgi-hero/bgi-hero-1600@2x.jpg);
+  }
+}
+
 .hero__container {
   margin-right: auto;
   margin-left: auto;
