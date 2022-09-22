@@ -1338,13 +1338,13 @@ img {
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .card-set {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, calc((100% - 30px) / 2));
   }
 }
 @media screen and (min-width: 1200px) {
   .card-set {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, calc((100% - 60px) / 3));
   }
 }
 
@@ -1396,8 +1396,9 @@ img {
 }
 
 .card__hover-text {
-  width: 322px;
   height: 168px;
+  padding-left: 24px;
+  padding-right: 24px;
   font-weight: 400;
   font-size: 18px;
   line-height: 1.56;
@@ -1413,7 +1414,6 @@ img {
 }
 
 .card__title {
-  width: 320px;
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;

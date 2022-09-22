@@ -8,15 +8,15 @@
 
     @include min-max ($min-tablet, $max-tablet) {
         display: grid;
-        // grid-template-columns: repeat(2, calc((100% - 30px) / 2));
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: repeat(2, calc((100% - 30px) / 2));
+        // grid-template-columns: 1fr 1fr;
 
     }
 
     @include min-width ($min-desktop) {
         display: grid;
-        // grid-template-columns: repeat(3, calc((100% - 60px) / 3));
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: repeat(3, calc((100% - 60px) / 3));
+        // grid-template-columns: 1fr 1fr 1fr;
     }
 }
 
@@ -85,8 +85,12 @@
 }
 
 .card__hover-text {
-    width: 322px;
+    // width: 322px;
     height: 168px;
+    // padding-top: 49px;
+    padding-left: 24px;
+    padding-right: 24px;
+
 
     font-weight: 400;
     font-size: 18px;
@@ -106,7 +110,7 @@
 
 
 .card__title {
-    width: 320px;
+    // width: 320px;
     font-size: 18px;
     line-height: 2;
     letter-spacing: 0.06em;
