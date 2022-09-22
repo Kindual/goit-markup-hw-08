@@ -154,6 +154,7 @@
 .header__socials {
     @include max-width ($max-mobile) {
         display: flex;
+        flex-wrap: wrap;
     }
 
     @include min-width ($min-tablet) {

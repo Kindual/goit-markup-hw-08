@@ -59,6 +59,11 @@ img {
   padding-left: 15px;
   padding-right: 15px;
 }
+@media screen and (min-width: 480px) {
+  .container {
+    width: 480px;
+  }
+}
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .container {
     width: 768px;
@@ -316,6 +321,7 @@ img {
 @media screen and (max-width: 767px) {
   .header__socials {
     display: flex;
+    flex-wrap: wrap;
   }
 }
 @media screen and (min-width: 768px) {
@@ -448,17 +454,25 @@ img {
   background-size: cover;
   background-color: #2F303A;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 480px) {
   .hero {
     width: 100%;
-    padding-top: 118px;
-    padding-bottom: 118px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .hero {
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../images/bgi-hero/bgi-hero-480.jpg);
   }
 }
 @media screen and (max-width: 767px) and (min-device-pixel-ratio: 2), screen and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), screen and (max-width: 767px) and (min-resolution: 192dpi), screen and (max-width: 767px) and (min-resolution: 2dppx) {
   .hero {
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../images/bgi-hero/bgi-hero-480@2x.jpg);
+  }
+}
+@media screen and (max-width: 1199px) {
+  .hero {
+    padding-top: 118px;
+    padding-bottom: 118px;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
@@ -983,7 +997,7 @@ img {
 }
 @media screen and (min-width: 1200px) {
   .footer__form-mail {
-    margin-left: 93px;
+    margin-left: auto;
   }
 }
 
@@ -1008,6 +1022,11 @@ img {
   .footer__input {
     margin-right: 0;
     width: 100%;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .footer__input {
+    width: 450px;
   }
 }
 
@@ -1270,6 +1289,7 @@ img {
 /* filter */
 .filter {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .filter__button {
@@ -1299,7 +1319,6 @@ img {
 }
 @media screen and (max-width: 767px) {
   .filter__list {
-    width: 350px;
     margin-left: 0;
   }
 }

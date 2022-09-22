@@ -139,7 +139,7 @@
     }
 
     @include min-width ($min-desktop) {
-        margin-left: 93px;
+        margin-left: auto;
     }
 }
 
@@ -166,6 +166,10 @@
     @include max-width ($max-mobile) {
         margin-right: 0;
         width: 100%;
+    }
+
+    @include min-max ($min-tablet, $max-tablet) {
+        width: 450px;
     }
 }
 
