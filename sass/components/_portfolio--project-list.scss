@@ -106,11 +106,16 @@
     padding: 20px 24px;
     border: 1px solid #ECECEC;
     border-top: none;
+    flex-grow: unset;
+
+    @include min-max ($min-tablet, $max-tablet) {
+        padding-right: 0;
+    }
 }
 
 
 .card__title {
-    // width: 320px;
+    width: 100%;
     font-size: 18px;
     line-height: 2;
     letter-spacing: 0.06em;
